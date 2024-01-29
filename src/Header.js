@@ -4,7 +4,7 @@ const Header = ({ logo }) => {
 	const navList = [
 		{ id: 1, title: 'Home' },
 		{ id: 2, title: 'about' },
-		{ id: 3, title: 'service' },
+		{ id: 3, title: 'services' },
 	];
 
 	return (

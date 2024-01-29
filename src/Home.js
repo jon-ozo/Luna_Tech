@@ -88,7 +88,7 @@ const Home = ({ logos }) => {
 
 	// cols-2 component variables - contact
 	const contactTitle = 'We Guarantee';
-	const contactSpanTitle = 'ground breking results';
+	const contactSpanTitle = 'ground breaking results';
 	const contactSubTitle = `Get in touch with us and let us help you uncover the real questions you should ask and together we will proffer solutions that last`;
 	const contactAlt = 'worried client';
 
