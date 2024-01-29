@@ -1,25 +1,70 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './Header';
+import Footer from './Footer';
+import Home from './Home';
+import About from './About';
+import Service from './Service';
+import logo from './img/luna-logo.png';
+import cashBox from './img/brands/logo-text.png';
+import fuelPointLogo from './img/brands/fuelpoint-logo.png';
+import tamakLogo from './img/brands/tamak-logo.png';
+import monilogo from './img/brands/moni-logo.png';
+import monielogo from './img/brands/moniepoint_logo.png';
+import { Route, Routes } from 'react-router-dom';
+import Contact from './Contact';
+// import ErrorPage from './ErrorPage';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const logos = [
+		{ id: 1, img: cashBox },
+		{ id: 2, img: fuelPointLogo },
+		{ id: 3, img: tamakLogo },
+		{ id: 4, img: monilogo },
+		{ id: 5, img: monielogo },
+	];
+
+	const footerLinks = [
+		{ id: 1, title: 'Inquiry' },
+		// { id: 2, title: 'Terms' },
+		// { id: 3, title: 'Disclaimer' },
+	];
+
+	return (
+		<article className='app'>
+			<Header logo={logo} />
+			<main className='full-width'>
+				<Routes>
+					<Route
+						path='/'
+						element={<Home logos={logos} />}
+					/>
+					<Route
+						path='/home'
+						element={<Home logos={logos} />}
+					/>
+					<Route
+						path='/about'
+						element={<About />}
+					/>
+					<Route
+						path='/service'
+						element={<Service />}
+					/>
+					<Route
+						path='/#faq'
+						element={<Home logos={logos} />}
+					/>
+					<Route
+						path='/contact'
+						element={<Contact />}
+					/>
+				</Routes>
+			</main>
+			<Footer
+				logo={logo}
+				footerLinks={footerLinks}
+			/>
+		</article>
+	);
 }
 
 export default App;
