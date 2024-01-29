@@ -1,12 +1,16 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-// import { useState } from 'react';
 
 const Nav = ({ logo, navList }) => {
-	// const [visible, setVisible] = useState[false];
+	const [visible, setVisible] = useState('hidden');
 
-	// const handleVisibleClick = () => {
-	// 	setVisible(true);
-	// };
+	const handleShowMobileNav = () => {
+		setVisible('');
+	};
+
+	const handleHideMoileNav = () => {
+		setVisible('hidden');
+	};
 
 	return (
 		<nav className='flex-display'>
@@ -40,11 +44,16 @@ const Nav = ({ logo, navList }) => {
 				>
 					Talk to us
 				</Link>
-				<i className='fa-solid fa-bars nav-link fa-2x'></i>
+				<i
+					onClick={handleShowMobileNav}
+					className='fa-solid fa-bars nav-link fa-2x'
+				></i>
 			</aside>
-
-			<ul className='mobile-nav hidden'>
-				<i className='fa-solid fa-xmark fa-2x'></i>
+			<ul className={'mobile-nav ' + visible}>
+				<i
+					onClick={handleHideMoileNav}
+					className='fa-solid fa-xmark fa-2x'
+				></i>
 
 				{navList.map((list) => (
 					<li key={list.id}>
