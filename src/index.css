@@ -816,7 +816,7 @@ nav a {
 
 @keyframes nav-slide-in {
   from {
-    right: -10000%
+    right: -100000%
   }
 
   to {
@@ -831,7 +831,7 @@ nav a {
   }
 
   to {
-    right: -10000%;
+    right: -100000%;
     opacity: 0;
   }
 }
