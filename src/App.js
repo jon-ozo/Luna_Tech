@@ -46,7 +46,7 @@ function App() {
 						element={<About />}
 					/>
 					<Route
-						path='/service'
+						path='/services'
 						element={<Service />}
 					/>
 					<Route

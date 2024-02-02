@@ -11,13 +11,13 @@ import contactImg from './img/contact-methods.jpg';
 import { Link } from 'react-router-dom';
 import propertyImg from './img/property-management.jpg';
 import consultingImg from './img/business-consulting.jpg';
-import relaxedManImg from './img/relaxed-man.webp';
+import relaxedManImg from './img/contractor.jpeg';
 
 const Home = ({ logos }) => {
 	// cols-2 component variables
 	const title = 'Navigating';
 	const spanTitle = 'Business Challenges';
-	const subTitle = `Luna is your calm harbor. Expert consulting, stress-free property management, and thoughtful equipment leasing. Find serenity in your business journey`;
+	const subTitle = `Luna serves as your steadfast anchor, providing expert consulting, streamlined vehicle and equipment leasing, and facilitating equipment and machinery purchasing. Discover tranquility in your business voyage as we navigate challenges on your behalf.`;
 	const alt = 'worried client';
 
 	// bento grid component variables
@@ -183,13 +183,15 @@ const Home = ({ logos }) => {
 							key='2'
 							className='flex-display'
 						>
-							<i className='fa-solid fa-circle-check fa-2x'></i> Management
+							<i className='fa-solid fa-circle-check fa-2x'></i> Property
+							Management
 						</li>
 						<li
 							key='3'
 							className='flex-display'
 						>
-							<i className='fa-solid fa-circle-check fa-2x'></i> Leasing
+							<i className='fa-solid fa-circle-check fa-2x'></i> Vehicle &
+							Equipment Leasing
 						</li>
 					</ul>
 				</section>

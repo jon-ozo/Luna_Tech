@@ -152,7 +152,7 @@ i {
 
 q {
   font-size: 1.3rem;
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 details {
@@ -575,17 +575,19 @@ nav a {
 .slider-col-component {
   width: var(--width);
   margin: 4rem auto 0;
-  background: var(--secondary);
-  border-radius: 5rem 5rem;
+  background: var(--primary);
+  border-radius: 1rem;
   position: relative;
+  color: var(--background);
 }
 
 .slider-col-component::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: var(--accent_light);
-  filter: blur(50px);
+  background: #1fe0e756;
+  border-radius: 1rem;
+  filter: blur(300px);
 }
 
 .slider-col-component header {
@@ -593,8 +595,7 @@ nav a {
 }
 
 .testimonial-wrapper {
-  background: var(--accent_light);
-  color: var(--accent);
+  background: white;
   margin-top: 3rem;
   padding: 3rem;
   overflow-x: auto;
@@ -609,6 +610,8 @@ nav a {
 .testimonial-card {
   flex-shrink: 0;
   width: 100%;
+  color: var(--secondary);
+  padding: var(--spacing);
 }
 
 .testimonial-card+.testimonial-card {
