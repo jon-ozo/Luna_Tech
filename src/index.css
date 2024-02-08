@@ -369,7 +369,9 @@ nav a {
   width: 100%;
   margin: 7rem auto;
   position: relative;
-  background: var(--secondary);
+  background: linear-gradient(315deg,
+      var(--primary),
+      var(--accent));
   padding-inline: var(--spacing);
 
   @media (min-width: 1024px) {
@@ -404,7 +406,7 @@ nav a {
   background: linear-gradient(to bottom,
       var(--primary),
       transparent);
-  filter: blur(90px);
+  filter: blur(150px);
 }
 
 .brand-wrapper-flex {

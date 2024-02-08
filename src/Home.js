@@ -74,7 +74,7 @@ const Home = ({ logos }) => {
 		},
 		{
 			id: 2,
-			clientName: 'Tinu',
+			clientName: 'Sydney',
 			companyName: 'Cashbox',
 			testimony: `Luna has played a pivotal role in facilitating significant purchases and investments for our company. Their referrals have contributed substantially to our clientele, and their involvement has been integral to our notable growth over the past year.`,
 		},
@@ -82,7 +82,7 @@ const Home = ({ logos }) => {
 			id: 3,
 			clientName: 'John',
 			companyName: 'WeeFeex',
-			testimony: `Luna has been a valuable partner in our business consultations, deploying skilled contractors to address various needs for Wefix. Their support has been instrumental in enhancing our business operations.`,
+			testimony: `Luna has been a valuable partner in our business consultations, deploying skilled contractors to address various needs for Weefeex. Their support has been instrumental in enhancing our business operations.`,
 		},
 	];
 
