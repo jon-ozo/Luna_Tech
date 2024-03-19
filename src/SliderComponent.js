@@ -31,12 +31,15 @@ const SliderComponent = ({
 					key={testimonials[currentIndex].id}
 					className='testimonial-card'
 				>
-					<h3>{testimonials[currentIndex].clientName}</h3>
-					<p>
-						<q>{testimonials[currentIndex].testimony}</q>
-					</p>
+					<h3>- {testimonials[currentIndex].clientName}</h3>
+					<blockquote>
+						<p>{testimonials[currentIndex].testimony}</p>
+					</blockquote>
 					<p className='company-name'>
-						{testimonials[currentIndex].companyName}
+						<img
+							src={testimonials[currentIndex].companyLogo}
+							alt='company logo'
+						/>
 					</p>
 				</section>
 			</div>

@@ -13,7 +13,7 @@ const Nav = ({ logo, navList }) => {
 	};
 
 	return (
-		<nav className='flex-display'>
+		<nav className='full-width flex-display bg-dark'>
 			<ul className='nav-link flex'>
 				{navList.map((list) => (
 					<li key={list.id}>
@@ -32,12 +32,18 @@ const Nav = ({ logo, navList }) => {
 			</figure>
 
 			<aside className='flex-display'>
-				<Link
+				<a
+					href='/#faq'
+					className='nav-link'
+				>
+					FAQ
+				</a>
+				{/* <Link
 					to='/#faq'
 					className='nav-link'
 				>
 					FAQ
-				</Link>
+				</Link> */}
 				<Link
 					to='/contact'
 					className='cta nav-link'

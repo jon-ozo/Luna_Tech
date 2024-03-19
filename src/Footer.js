@@ -69,7 +69,7 @@ const Footer = ({ logo, footerLinks }) => {
 					</li> */}
 					<li key='3'>
 						<i className='fa-solid fa-envelope'></i>
-						<span>Email: info@lunatechcorp.com</span>
+						<span>Email: contact@lunatechcorp.com</span>
 					</li>
 				</ul>
 			</section>

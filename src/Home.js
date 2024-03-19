@@ -3,15 +3,12 @@ import SliderComponent from './SliderComponent';
 import TwoColsComponent from './TwoColsComponent';
 import SingleColsComponent from './SingleColsComponent';
 import img from './img/worried-male.jpg';
-import consultImg from './img/consulting.png';
-import purchaseImg from './img/purchase.png';
-import leaseImg from './img/lease.png';
-// import propertyImg from './img/property-management.png';
+import Hero from './Hero';
 import contactImg from './img/contact-methods.jpg';
-import { Link } from 'react-router-dom';
-import propertyImg from './img/property-management.jpg';
-import consultingImg from './img/business-consulting.jpg';
-import relaxedManImg from './img/contractor.jpeg';
+import consultingImg from './img/business-consulting.png';
+import moniepointImg from './img/brands/moniepoint_logo.png';
+import cashboxImg from './img/brands/logo-text.png';
+import weefeexImg from './img/brands/wee-logo.png';
 
 const Home = ({ logos }) => {
 	// cols-2 component variables
@@ -23,42 +20,63 @@ const Home = ({ logos }) => {
 	// bento grid component variables
 	const bentoTitle = "Here's why";
 	const bentoSpanTitle = 'you should choose Luna Tech';
-	const bentoSubTitle = `Embark on a journey where simplicity meets excellence. Join Luna for a transformative business experience.`;
+	const bentoSubTitle = `Grow your business to new heights. Embark on a journey where simplicity meets excellence. Let us help you transform your business.`;
 	const gridContents = [
 		{
 			id: 1,
-			title: 'Stress-Free Leasing',
-			subtitle: `Elevate your operations with hassle-free equipment leasing, tailored to your needs.`,
-			img: relaxedManImg,
-			alt: 'relaxed business client',
+			title: 'Holistic Approach',
+			subtitle: `Luna doesn't just provide services; we offer a holistic approach to business enhancement. Whether you're seeking cutting-edge technology, expert IT guidance, or streamlined procurement, we provide comprehensive solutions that address every facet of your business.`,
+			img: '',
+			alt: '',
+			btn: false,
 		},
 		{
 			id: 2,
-			title: 'Strategic Clarity',
-			subtitle: `Gain a crystal-clear understanding of your business path with Luna's expert consulting.`,
+			title: 'Expertise and Innovation',
+			subtitle: `Benefit from Luna's wealth of expertise and commitment to innovation. Our seasoned professionals bring a wealth of knowledge, ensuring that your business stays ahead in the dynamic landscape of technology, IT solutions, and procurement strategies.`,
 			img: consultingImg,
 			alt: 'business consultation',
+			btn: true,
 		},
 		{
 			id: 3,
-			title: 'Effortless Management',
-			subtitle: `Experience seamless property solutions that free you from the complexities of real estate.`,
-			img: propertyImg,
-			alt: 'property managers',
+			title: 'Tailored Solutions',
+			subtitle: `We understand that every business is unique. Luna's solutions are tailor-made to suit your specific needs and objectives. From technology procurement to IT consultancy and procurement expertise, our services are crafted to align seamlessly with your business goals.`,
+			img: '',
+			alt: '',
+			btn: false,
 		},
 		{
 			id: 4,
-			title: 'Innovation Hub',
-			subtitle: `Harness innovation through our collaborative approach, fostering growth and forward-thinking.`,
+			title: 'Vendor Relationships',
+			subtitle: `Benefit from Luna's strong relationships with reputable vendors. Our network ensures access to quality products and services, allowing your business to thrive with reliable and innovative solutions.`,
 			img: '',
 			alt: '',
+			btn: false,
 		},
 		{
 			id: 5,
-			title: 'Customer-Centric',
-			subtitle: `Your success is our priority. Luna's services are designed to meet and exceed your unique business goals.`,
+			title: 'Comprehensive IT Services',
+			subtitle: `Luna is your one-stop destination for comprehensive IT services. From technology procurement to IT business consultancy and IT DevOps, we cover the entire spectrum, supporting your business's technological evolution.`,
 			img: '',
 			alt: '',
+			btn: false,
+		},
+		{
+			id: 6,
+			title: 'Procurement Excellence',
+			subtitle: `Luna's procurement services redefine excellence. Beyond mere purchases, we provide strategic sourcing, vendor management, and cost-effective solutions. Our procurement expertise extends to vehicles, equipment, and a range of essential resources, ensuring your business operates efficiently.`,
+			img: '',
+			alt: '',
+			btn: false,
+		},
+		{
+			id: 7,
+			title: 'Seamless Technology Procurement',
+			subtitle: `Luna is your go-to tech procurement company. Our streamlined and efficient process guarantees a hassle-free experience, making the acquisition of the latest and most advanced technology a seamless journey.`,
+			img: '',
+			alt: '',
+			btn: false,
 		},
 	];
 
@@ -69,19 +87,19 @@ const Home = ({ logos }) => {
 		{
 			id: 1,
 			clientName: 'Kemi',
-			companyName: 'Moniepoint LLC',
+			companyLogo: moniepointImg,
 			testimony: `Luna's contractors demonstrated utmost professionalism in orchestrating the facilitation and execution of our IT infrastructure. Kudos to the Luna team for a job well done!`,
 		},
 		{
 			id: 2,
 			clientName: 'Sydney',
-			companyName: 'Cashbox',
+			companyLogo: cashboxImg,
 			testimony: `Luna has played a pivotal role in facilitating significant purchases and investments for our company. Their referrals have contributed substantially to our clientele, and their involvement has been integral to our notable growth over the past year.`,
 		},
 		{
 			id: 3,
 			clientName: 'John',
-			companyName: 'WeeFeex',
+			companyLogo: weefeexImg,
 			testimony: `Luna has been a valuable partner in our business consultations, deploying skilled contractors to address various needs for Weefeex. Their support has been instrumental in enhancing our business operations.`,
 		},
 	];
@@ -161,57 +179,16 @@ const Home = ({ logos }) => {
 	];
 
 	return (
-		<article className='hero'>
-			<header className='title'>
-				<h1>
-					<span>Unlocking</span>
-					<br></br> Opportunities, Delivering Results
-				</h1>
-				<p className='sub-title'>
-					At Luna Technologies, Expertise Meets Innovation. We offer strategic
-					solutions, while maintaining reliability & trust.
-				</p>
-				<section>
-					<ul className='flex-display service-list'>
-						<li
-							key='1'
-							className='flex-display'
-						>
-							<i className='fa-solid fa-circle-check fa-2x'></i> Consulting
-						</li>
-						<li
-							key='2'
-							className='flex-display'
-						>
-							<i className='fa-solid fa-circle-check fa-2x'></i> Property
-							Management
-						</li>
-						<li
-							key='3'
-							className='flex-display'
-						>
-							<i className='fa-solid fa-circle-check fa-2x'></i> Vehicle &
-							Equipment Leasing
-						</li>
-					</ul>
-				</section>
-				<div className='cta-wrapper'>
-					<Link
-						to='/contact'
-						className='cta'
-					>
-						TALK TO US
-					</Link>
-				</div>
-			</header>
+		<>
+			<Hero />
 
 			<section className='brands-wrapper'>
-				<div className='brand-logo brand-wrapper-flex'>
+				<header>
+					<p className='minor-heading'>Brands That Trust Us</p>
+				</header>
+				<div className='brand-logo flex-display'>
 					{logos.map((logo) => (
-						<div
-							key={logo.id}
-							className='logo grid'
-						>
+						<div key={logo.id}>
 							<img
 								src={logo.img}
 								alt='brand logo'
@@ -256,34 +233,7 @@ const Home = ({ logos }) => {
 				subTitle={faqSubTitle}
 				contents={faqs}
 			/>
-
-			<div className='hero-icons'>
-				<figure>
-					<img
-						src={consultImg}
-						alt='business consultion'
-					/>
-				</figure>
-				<figure>
-					<img
-						src={leaseImg}
-						alt='leasing'
-					/>
-				</figure>
-				<figure>
-					<img
-						src={propertyImg}
-						alt='property management'
-					/>
-				</figure>
-				<figure>
-					<img
-						src={purchaseImg}
-						alt='purchase'
-					/>
-				</figure>
-			</div>
-		</article>
+		</>
 	);
 };
 

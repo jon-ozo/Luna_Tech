@@ -31,7 +31,7 @@ function App() {
 	return (
 		<article className='app'>
 			<Header logo={logo} />
-			<main className='full-width'>
+			<main>
 				<Routes>
 					<Route
 						path='/'
@@ -49,10 +49,10 @@ function App() {
 						path='/services'
 						element={<Service />}
 					/>
-					<Route
+					{/* <Route
 						path='/#faq'
 						element={<Home logos={logos} />}
-					/>
+					/> */}
 					<Route
 						path='/contact'
 						element={<Contact />}

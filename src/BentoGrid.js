@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const BentoGrid = ({
 	bentoTitle,
 	bentoSpanTitle,
@@ -5,7 +7,7 @@ const BentoGrid = ({
 	gridContents,
 }) => {
 	return (
-		<article className='full-wdth bento-bg'>
+		<article className='full-wdth bento-wrapper'>
 			<header>
 				<h2>
 					{bentoTitle} <span>{bentoSpanTitle}</span>
@@ -13,17 +15,28 @@ const BentoGrid = ({
 				<p>{bentoSubTitle}</p>
 			</header>
 
-			<div className='grid bento-grid'>
+			<div className='bento-grid'>
 				{gridContents.map((gridContent) => (
 					<section key={gridContent.id}>
 						<header>
 							<h3>{gridContent.title}</h3>
 							<p>{gridContent.subtitle}</p>
+							<p>
+								{gridContent.btn && (
+									<Link
+										to='/contact'
+										className='cta nav-link'
+									>
+										Consult With Us
+									</Link>
+								)}
+							</p>
 						</header>
 						<figure>
 							<img
 								src={gridContent.img}
 								alt={gridContent.alt}
+								className='bento-img'
 							/>
 						</figure>
 					</section>

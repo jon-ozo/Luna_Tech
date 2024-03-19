@@ -8,12 +8,12 @@ const Header = ({ logo }) => {
 	];
 
 	return (
-		<header className='full-width'>
+		<>
 			<Nav
 				logo={logo}
 				navList={navList}
 			/>
-		</header>
+		</>
 	);
 };
 

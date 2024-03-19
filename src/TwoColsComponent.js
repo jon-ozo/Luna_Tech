@@ -1,6 +1,15 @@
 import { Link } from 'react-router-dom';
 
-const TwoColsComponent = ({ title, spanTitle, subTitle, img, alt, btn }) => {
+const TwoColsComponent = ({
+	title,
+	spanTitle,
+	subTitle,
+	img,
+	alt,
+	btn,
+	listStatus,
+	lists,
+}) => {
 	return (
 		<article className='flex-display cols-2'>
 			<section className='row'>
@@ -9,6 +18,13 @@ const TwoColsComponent = ({ title, spanTitle, subTitle, img, alt, btn }) => {
 						{title} <span>{spanTitle}</span>
 					</h2>
 					<p>{subTitle}</p>
+					{listStatus && (
+						<ul className='service-list'>
+							{lists.map((list) => (
+								<li key={list.key}>{list.listItem}</li>
+							))}
+						</ul>
+					)}
 					{btn && (
 						<Link
 							to='/contact'
